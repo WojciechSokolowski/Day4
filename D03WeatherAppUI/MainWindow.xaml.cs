@@ -25,6 +25,7 @@ namespace D03WeatherAppUI
             InitializeComponent();
         }
 
+        // TODO complete comparing with github
 
         //synchronous processing
         private void Button_Click_1(object sender, RoutedEventArgs e)
