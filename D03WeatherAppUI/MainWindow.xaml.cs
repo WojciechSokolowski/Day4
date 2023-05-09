@@ -26,16 +26,17 @@ namespace D03WeatherAppUI
         }
 
         // TODO complete comparing with github
+        // done
 
         //synchronous processing
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
 
 
             string cities = txtCityName.Text;
             WeatherManager wm = new WeatherManager();
 
-            string[] citiesArray = cities.Split("\n");
+            string[] citiesArray = cities.Split("\r\n");
 
             txtLogs.Text = "";
             txtTemperature.Text = "";
@@ -46,26 +47,26 @@ namespace D03WeatherAppUI
                 {
                     int temp = wm.GetTemperature(city);
                     txtLogs.Text += $"Processing city {city}";
-                    txtTemperature.Text += $"Temperature in city{city} is {temp.ToString()} \n";
+                    txtTemperature.Text += $"Temperature in city {city} is {temp.ToString()} \n";
 
                 }
 
             }
-            catch(Exception)
+            catch (Exception)
             {
-                MessageBox.Show("We can not process your data","Error",MessageBoxButton.OK,MessageBoxImage.Error);
+                MessageBox.Show("We can not process your data", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click_1(object sender, RoutedEventArgs e)
         {
 
             string cities = txtCityName.Text;
             WeatherManager wm = new WeatherManager();
 
-            string[] citiesArray = cities.Split("\n");
-
+            string[] citiesArray = cities.Split("\r\n");
+            
             txtLogs.Text = "";
             txtTemperature.Text = "";
 
@@ -79,14 +80,11 @@ namespace D03WeatherAppUI
 
                     t.GetAwaiter().OnCompleted(() =>
                     {
-                        txtTemperature.Text += $"Temperature in city{city} is {t.Result.ToString()} \n";
-
-
+                        txtTemperature.Text += $"Temperature in city {city} is {t.Result.ToString()} \n";
                     });
 
                     txtLogs.Text += $"Processing city {city}";
                 }
-
             }
             catch(Exception)
             {

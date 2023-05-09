@@ -7,14 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Get Weather (synchronus)" HorizontalAlignment="Left" Margin="21,40,0,0" VerticalAlignment="Top" Height="65" Width="195" Click="Button_Click_1"/>
+        <Button Content="Get Weather (synchronus)" HorizontalAlignment="Left" Margin="21,40,0,0" VerticalAlignment="Top" Height="65" Width="195" Click="Button_Click"/>
         <TextBox x:Name="txtCityName" AcceptsReturn="True" HorizontalAlignment="Left" Margin="239,74,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="83"/>
         <TextBox x:Name="txtTemperature" HorizontalAlignment="Left" Margin="533,74,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Height="83"/>
         <Label Content="Cities name" HorizontalAlignment="Left" Margin="239,40,0,0" VerticalAlignment="Top"/>
         <Label Content="Temperature" HorizontalAlignment="Left" Margin="533,48,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtLogs" HorizontalAlignment="Left" Height="83" Margin="390,74,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="101"/>
         <Label Content="Logs" HorizontalAlignment="Left" Margin="390,40,0,0" VerticalAlignment="Top" Width="86"/>
-        <Button Content="Get Weather (asynchronus)" HorizontalAlignment="Left" Margin="21,116,0,0" VerticalAlignment="Top" Height="40" Width="195" Click="Button_Click"/>
+        <Button Content="Get Weather (asynchronus)" HorizontalAlignment="Left" Margin="21,116,0,0" VerticalAlignment="Top" Height="40" Width="195" Click="Button_Click_1"/>
 
     </Grid>
 </Window>
