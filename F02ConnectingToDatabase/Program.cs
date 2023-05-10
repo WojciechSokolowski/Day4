@@ -23,3 +23,5 @@ while (reader.Read())
     string resoult = reader.GetValue(2) + " " + reader.GetValue(3);
     Console.WriteLine(resoult);
 }    
+
+connection.Close(); 
